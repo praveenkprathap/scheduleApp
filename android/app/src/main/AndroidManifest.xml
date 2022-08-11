@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jobsample">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="Schedule App"
         android:name="${applicationName}"
