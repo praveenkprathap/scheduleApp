@@ -11,6 +11,8 @@ class API {
     Dio dio = Dio();
     dio.interceptors.add(InterceptorsWrapper(onRequest: (options, handler) {
       // Do something before request is sent
+      // options.headers["X-API-KEY"] = apiKey;
+      //   options.headers["Authorization"] = token;
       return handler.next(options); //continue
       // If you want to resolve the request with some custom data，
       // you can resolve a `Response` object eg: `handler.resolve(response)`.
@@ -29,6 +31,6 @@ class API {
     }));
     return dio;
   }
-}
+} //https://itsallwidgets.com/json-to-dart-converter-support-null-safety
 
 class NetworkError extends Error {}
